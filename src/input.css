@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply overflow-x-hidden text-black;
+    @apply font-Urbanist overflow-x-hidden text-black;
   }
 
   .container {
@@ -21,33 +23,87 @@
     @apply text-2xl;
   }
   h4 {
-    @apply text-base;
+    @apply text-base font-medium;
   }
   p {
-    @apply text-sm;
+    @apply text-sm font-medium;
   }
+
+  .header__mobile {
+    @apply bg-white absolute flex flex-col w-[25rem] h-screen top-[7.625rem] duration-500 right-[-100%] text-start py-10 px-8 lg:static lg:flex-row lg:w-full lg:justify-between lg:p-0 lg:items-center lg:h-[3.5rem];
+  }
+
   .header__nav {
-    @apply bg-tertiary fixed flex flex-col gap-10 w-[25rem] top-[5.6rem] text-start p-5 py-10  right-[-100%] duration-500;
+    @apply flex flex-col gap-10 pb-10 lg:flex-row lg:p-0;
   }
+
   .header__right {
-    @apply bg-tertiary fixed w-[25rem] top-[19rem] text-start p-5 py-10 font-semibold  right-[-100%] duration-500;
+    @apply flex flex-col-reverse gap-5 pt-7 border-t-2 border-t-black/10 lg:flex-row lg:border-0 lg:p-0 lg:gap-10 lg:items-center;
   }
-  .header__nav.open, .header__right.open {
-    @apply right-0 z-50 overflow-y-hidden;
+
+  .header__mobile.open {
+    @apply right-0 overflow-y-hidden;
   }
+
   .toggle__menu {
-    @apply flex flex-col gap-1 z-50 lg:hidden;
+    @apply flex flex-col gap-1 p-2 lg:hidden relative;
   }
   .toggle__menu span {
     @apply content-["*"] bg-black/50 w-5 h-[2px] rounded-lg;
   }
+
+  .toggle__menu small {
+    @apply absolute h-6 w-6 hover:bg-black/10 hover:scale-150 rounded-full bottom-[4px] right-[6px] transition ease-in duration-500;
+  }
+  .title {
+    @apply grid gap-5 text-center pb-10;
+  }
+
+  .homeStars__card {
+    @apply border-b;
+  }
+  .homeStars__card:last-child {
+    @apply border-none;
+  }
+
+  .rewardFav li i {
+    @apply text-orange-400 text-[9px];
+  }
+
+  .rewardFav li {
+    @apply text-xl font-bold cursor-pointer;
+  }
+
+  .rewardFav ul:after {
+    @apply content-[""] absolute bottom-0 h-[4px] w-10 bg-primary w-[20%];
+  }
+
+  .rewardFav ul:after.active {
+    @apply block;
+  }
+
+  .rewardFav__card {
+    @apply grid gap-10 pt-5 hidden;
+  }
+  .rewardFav__card.active {
+    @apply block;
+  }
 }
 
 @layer components {
-    .btn {
-        @apply py-2 px-4 rounded-3xl text-white bg-black hover:bg-black/50;
-    }
-    .btn .bg-outline {
-        
-    }
+  .btn {
+    @apply py-1 px-4 rounded-3xl text-white bg-transparent border border-transparent active:scale-95;
+  }
+  .btn.bg-blackk {
+    @apply text-white bg-black hover:bg-black/70 hover:border-black;
+  }
+  .btn.bg-transparentt {
+    @apply bg-transparent border-black hover:border-black hover:bg-transparent/10;
+  }
+  .btn.bg-outlineW {
+    @apply bg-transparent border-white hover:border-white hover:bg-transparent/10;
+  }
+  .btn.bg-primaryy {
+    @apply bg-primary border border-primary hover:bg-primary/90;
+  }
 }

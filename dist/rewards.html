@@ -38,18 +38,32 @@
             </g>
           </svg>
           <div class="header__mobile">
-            <ul class="header__nav text-xl">
-              <li><a href="./menu.html">Menu</a></li>
-              <li><a href="./rewards.html">Rewards</a></li>
-              <li><a href="./giftcards.html">Gift Cards</a></li>
+            <ul
+              class="header__nav text-xl lg:text-base lg:uppercase lg:font-bold"
+            >
+              <li>
+                <a class="lg:hover:text-primary" href="./menu.html">Menu</a>
+              </li>
+              <li>
+                <a class="lg:hover:text-primary" href="./rewards.html"
+                  >Rewards</a
+                >
+              </li>
+              <li>
+                <a class="lg:hover:text-primary" href="./giftcards.html"
+                  >Gift Cards</a
+                >
+              </li>
             </ul>
             <div class="header__right">
               <a class="hover:text-primary font-bold" href=""
                 ><i class="fa-solid fa-location-dot"></i>&nbsp; Find a store</a
               >
               <div class="header__btn flex gap-3 items-center">
-                <a class="btn bg-transparentt text-black" href="">Sign in</a>
-                <a class="btn bg-blackk font-bold" href="">Join now</a>
+                <a class="btn bg-transparentt text-black font-bold" href=""
+                  >Sign in</a
+                >
+                <a class="btn bg-blackk font-extrabold" href="">Join now</a>
               </div>
             </div>
           </div>
@@ -64,34 +78,36 @@
       </div>
     </header>
     <!-- announcement -->
-    <section class="announce bg-tertiary py-2 sticky top-0">
+    <section class="announce bg-tertiary py-2 sticky top-0 lg:py-4">
       <div class="container">
         <div
           class="announce__wrapper flex items-center justify-between text-white"
         >
           <p class="uppercase font-extrabold">Starbucks® Rewards</p>
-          <a class="btn bg-outlineW font-bold" href="">Join in the app</a>
+          <a class="btn bg-outlineW font-bold lg:hidden" href=""
+            >Join in the app</a
+          >
         </div>
       </div>
     </section>
     <main>
-      <!-- home banner -->
+      <!-- reward banner -->
       <section
-        class="homeBanner bg-bgMenu lg:bg-bgMenuLarge lg:h-[100rem] lg:bg-contain bg-cover bg-no-repeat h-[68.2vh] object-contain pt-[2rem]"
+        class="rewardBanner bg-bgMenu lg:bg-bgMenuLarge lg:bg-contain bg-cover bg-no-repeat h-[68.2vh] object-contain pt-[2rem]"
       >
         <div class="container">
-          <div class="homeBanner__wrapper flex flex-col">
+          <div class="rewardBanner__wrapper flex flex-col lg:flex-row">
             <div
-              class="homeBanner__text text-center grid gap-5 justify-center lg:text-start"
+              class="rewardBanner__text text-center grid gap-5 justify-center lg:text-start"
             >
               <h2 class="font-bold">
                 FREE COFFEE <br />
                 IS A TAP AWAY
               </h2>
               <h4>Join now to start earning Rewards</h4>
-              <p class="mt-3">
-                <a class="btn bg-primaryy font-bold" href="">Join in the app</a>
-              </p>
+              <a class="btn bg-primaryy font-bold justify-self-center" href=""
+                >Join in the app</a
+              >
               <h4>
                 <a class="underline hover:decoration-transparent" href=""
                   >Or join online</a
@@ -102,17 +118,17 @@
         </div>
       </section>
 
-      <!-- home steps -->
-      <section class="homeSteps py-[4rem]">
+      <!-- reward steps mobile -->
+      <section class="rewardSteps lg:hidden py-[4rem]">
         <div class="container">
-          <div class="homeSteps__title grid text-center gap-4 pb-10">
+          <div class="rewardSteps__title grid text-center gap-4 pb-10">
             <h3 class="font-bold">Getting started is easy</h3>
             <p>Earn Stars and get rewarded in a few easy steps.</p>
           </div>
-          <div class="homeSteps__wrapper flex flex-col gap-7">
-            <div class="homeSteps__card flex gap-4 items-start">
+          <div class="rewardSteps__wrapper flex flex-col gap-7">
+            <div class="rewardSteps__card flex gap-4 items-start">
               <img class="h-[3rem]" src="../img/1.webp" alt="" />
-              <div class="homeSteps__text grid gap-5">
+              <div class="rewardSteps__text grid gap-5">
                 <h4 class="font-bold">Download the Starbucks® app</h4>
                 <p>
                   <a
@@ -130,9 +146,9 @@
                 </p>
               </div>
             </div>
-            <div class="homeSteps__card flex gap-4 items-start">
+            <div class="rewardSteps__card flex gap-4 items-start">
               <img class="h-[3rem]" src="../img/2.webp" alt="" />
-              <div class="homeSteps__text grid gap-5">
+              <div class="rewardSteps__text grid gap-5">
                 <h4 class="font-bold">Order and pay how you’d like</h4>
                 <p>
                   Use cash, credit/debit card or save some time and pay right
@@ -145,9 +161,75 @@
                 </p>
               </div>
             </div>
-            <div class="homeSteps__card flex gap-4 items-start">
+            <div class="rewardSteps__card flex gap-4 items-start">
               <img class="h-[3rem]" src="../img/3.webp" alt="" />
-              <div class="homeSteps__text grid gap-5">
+              <div class="rewardSteps__text grid gap-5">
+                <h4 class="font-bold">Earn Stars, get Rewards</h4>
+                <p>
+                  As you earn Stars, you can redeem them for Rewards—like free
+                  food, drinks, and more. Start redeeming with as little as 25
+                  Stars!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- rewards steps desktop -->
+      <section class="rewardSteps__desktop lg:block hidden py-[4rem]">
+        <div class="container">
+          <div class="rewardSteps__title grid text-center gap-4 pb-10">
+            <h3 class="font-bold">Getting started is easy</h3>
+            <p>Earn Stars and get rewarded in a few easy steps.</p>
+          </div>
+          <div
+            class="rewardSteps__wrapper flex flex-col gap-7 lg:flex-row lg:max-w-[70rem] lg:mx-auto"
+          >
+            <div
+              class="rewardSteps__card flex gap-4 items-start lg:flex-col lg:text-center lg:items-center lg:max-w-[22rem] lg:gap-7"
+            >
+              <img class="h-[3rem]" src="../img/1.webp" alt="" />
+              <div class="rewardSteps__text grid gap-5">
+                <h4 class="font-bold">Create an account</h4>
+                <p>
+                  To get started,
+                  <a
+                    class="underline hover:decoration-transparent text-primary"
+                    href=""
+                    >join now</a
+                  >. You can also
+                  <a
+                    class="underline hover:decoration-transparent text-primary"
+                    href=""
+                    >join in the app</a
+                  >
+                  to get access to the full range of Starbucks® Rewards
+                  benefits.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rewardSteps__card flex gap-4 items-start lg:flex-col lg:text-center lg:items-center lg:max-w-[22rem] lg:gap-7"
+            >
+              <img class="h-[3rem]" src="../img/2.webp" alt="" />
+              <div class="rewardSteps__text grid gap-5">
+                <h4 class="font-bold">Order and pay how you’d like</h4>
+                <p>
+                  Use cash, credit/debit card or save some time and pay right
+                  through the app. You’ll collect Stars all ways.
+                  <a
+                    class="underline hover:decoration-transparent text-primary"
+                    href=""
+                    >Learn how</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="rewardSteps__card flex gap-4 items-start lg:flex-col lg:text-center lg:items-center lg:max-w-[22rem] lg:gap-7"
+            >
+              <img class="h-[3rem]" src="../img/3.webp" alt="" />
+              <div class="rewardSteps__text grid gap-5">
                 <h4 class="font-bold">Earn Stars, get Rewards</h4>
                 <p>
                   As you earn Stars, you can redeem them for Rewards—like free
@@ -160,12 +242,12 @@
         </div>
       </section>
 
-      <!-- home tabs -->
+      <!-- reward tabs -->
       <section class="rewardFav bg-secondary/50 pt-10">
         <div class="rewardFav__title grid gap-5 text-center">
           <h3 class="font-bold">Get your favorites for free</h3>
           <ul
-            class="rewardFav__tabs relative grid grid-cols-5 justify-items-center py-5"
+            class="rewardFav__tabs relative grid grid-cols-5 py-5 items-center lg:justify-between lg:max-w-[50rem]"
           >
             <li id="rewardtabs-1" class="active">
               25<i class="fa-solid fa-star"></i>
@@ -177,24 +259,23 @@
           </ul>
         </div>
 
-        <div class="rewardFav__wrapper bg-secondary pb-10 px-4">
+        <div
+          class="rewardFav__wrapper bg-secondary pb-10 px-4 grid justify-items-center"
+        >
           <div class="rewardFav__card active" id="rewardtabs-1-content">
             <img src="../img/25.webp" alt="" />
-            <div class="rewardFav__card--text grid text-center gap-5">
-              <small class="text-[1.2rem] font-bold"
-                >Handcrafted drink (Cold Brew, lattes and more) or hot
-                breakfast</small
-              >
+            <div class="rewardFav__card--text">
+              <small>Customize your drink</small>
               <p>
-                Turn good mornings great with a delicious handcrafted drink of
-                your choice, breakfast sandwich or oatmeal on us.
+                Make your drink just right with an extra espresso shot, nondairy
+                milk or a dash of your favorite syrup.
               </p>
             </div>
           </div>
           <div class="rewardFav__card" id="rewardtabs-2-content">
             <img src="../img/100.webp" alt="" />
-            <div class="rewardFav__card--text grid text-center gap-5">
-              <small class="text-[1.2rem] font-bold"
+            <div class="rewardFav__card--text">
+              <small
                 >Brewed hot or iced coffee or tea, bakery item, packaged snack
                 and more</small
               >
@@ -206,8 +287,8 @@
           </div>
           <div class="rewardFav__card" id="rewardtabs-3-content">
             <img src="../img/200.webp" alt="" />
-            <div class="rewardFav__card--text grid text-center gap-5">
-              <small class="text-[1.2rem] font-bold"
+            <div class="rewardFav__card--text">
+              <small
                 >Handcrafted drink (Cold Brew, lattes and more) or hot
                 breakfast</small
               >
@@ -219,10 +300,8 @@
           </div>
           <div class="rewardFav__card" id="rewardtabs-4-content">
             <img src="../img/300.webp" alt="" />
-            <div class="rewardFav__card--text grid text-center gap-5">
-              <small class="text-[1.2rem] font-bold"
-                >Sandwich, protein box or at-home coffee</small
-              >
+            <div class="rewardFav__card--text">
+              <small>Sandwich, protein box or at-reward coffee</small>
               <p>
                 Enjoy a PM pick-me-up with a lunch sandwich, protein box or a
                 bag of coffee—including Starbucks VIA Instant®.
@@ -231,12 +310,10 @@
           </div>
           <div class="rewardFav__card" id="rewardtabs-5-content">
             <img src="../img/400.webp" alt="" />
-            <div class="rewardFav__card--text grid text-center gap-5">
-              <small class="text-[1.2rem] font-bold"
-                >Select Starbucks® merchandise</small
-              >
+            <div class="rewardFav__card--text">
+              <small>Select Starbucks® merchandise</small>
               <p>
-                Take home a signature cup, drink tumbler or your choice of
+                Take reward a signature cup, drink tumbler or your choice of
                 coffee merch up to $20.
               </p>
             </div>
@@ -244,20 +321,24 @@
         </div>
       </section>
 
-      <!-- home extras -->
-      <section class="homeExtras py-[4rem]">
+      <!-- reward extras -->
+      <section class="rewardExtras py-[4rem]">
         <div class="container">
-          <div class="homeExtras__title grid gap-5 text-center pb-10">
+          <div class="rewardExtras__title grid gap-5 text-center pb-10">
             <h3 class="font-semibold">Endless Extras</h3>
             <p>
               Joining Starbucks® Rewards means unlocking access to benefits like
               quick and easy ordering, tasty Rewards and—yes, free coffee.
             </p>
           </div>
-          <div class="homeExtras__wrapper flex flex-col gap-7">
-            <div class="homeExtras__card flex gap-4 items-start">
+          <div
+            class="rewardExtras__wrapper flex flex-col gap-7 lg:flex-row lg:max-w-[70rem] lg:mx-auto"
+          >
+            <div
+              class="rewardExtras__card flex gap-4 items-start lg:items-center lg:flex-col lg:text-center"
+            >
               <img class="h-[7rem]" src="../img/1-fun-freebies.webp" alt="" />
-              <div class="homeExtras__text grid gap-5">
+              <div class="rewardExtras__text grid gap-5">
                 <h4 class="font-bold">Fun freebies</h4>
                 <p>
                   Not only can you earn free coffee, look forward to a birthday
@@ -272,13 +353,15 @@
                 </p>
               </div>
             </div>
-            <div class="homeExtras__card flex gap-4 items-start">
+            <div
+              class="rewardExtras__card flex gap-4 items-start lg:items-center lg:flex-col lg:text-center"
+            >
               <img
                 class="h-[7rem]"
                 src="../img/2-order-and-pay-ahead.webp"
                 alt=""
               />
-              <div class="homeExtras__text grid gap-5">
+              <div class="rewardExtras__text grid gap-5">
                 <h4 class="font-bold">Order & pay ahead</h4>
                 <p>
                   Master the art of ordering ahead with saved favorites and
@@ -293,13 +376,15 @@
                 </p>
               </div>
             </div>
-            <div class="homeExtras__card flex gap-4 items-start">
+            <div
+              class="rewardExtras__card flex gap-4 items-start lg:items-center lg:flex-col lg:text-center"
+            >
               <img
                 class="h-[7rem]"
                 src="../img/3-get-to-free-faster.webp"
                 alt=""
               />
-              <div class="homeExtras__text grid gap-5">
+              <div class="rewardExtras__text grid gap-5">
                 <h4 class="font-bold">Get to free faster</h4>
                 <p>
                   Earn Stars even quicker with Bonus Star challenges, Double
@@ -318,35 +403,35 @@
         </div>
       </section>
 
-      <!-- home stars -->
-      <section class="homeStars">
+      <!-- reward stars -->
+      <section class="rewardStars  py-[4rem]">
         <div class="container">
-          <div class="homeStars__title grid gap-5 text-center pb-10">
+          <div class="rewardStars__title grid gap-5 text-center pb-10">
             <h3 class="font-semibold">Cash or card, you earn Stars</h3>
             <p>
               No matter how you pay, you can earn Stars with your morning
               coffee. Those Stars add up to (really delicious) Rewards.
             </p>
           </div>
-          <div class="homeStars__wrapper grid gap-10">
-            <div class="homeStars__card grid gap-7">
-              <div class="homeStars__card--title">
-                <small class="text-[1.2rem] font-bold">1★Star per dollar</small>
+          <div class="rewardStars__wrapper grid gap-10 lg:max-w-[82rem] lg:mx-auto">
+            <div class="rewardStars__card grid gap-7 lg:grid-cols-3">
+              <div class="rewardStars__card--title">
+                <small>1★Star per dollar</small>
                 <p>Pay as you go</p>
               </div>
-              <div class="homeStars__card--details items-start flex gap-4">
+              <div class="rewardStars__card--details items-start flex gap-4">
                 <img class="h-[10rem]" src="../img/scan.png" alt="" />
-                <div class="homeStars__text grid gap-5">
+                <div class="rewardStars__text grid gap-5">
                   <h4 class="font-bold">Scan and pay separately</h4>
                   <p>
-                    Scan and pay separately Use cash or credit/debit card at the
+                    Use cash or credit/debit card at the
                     register.
                   </p>
                 </div>
               </div>
-              <div class="homeStars__card--details items-start flex gap-4">
+              <div class="rewardStars__card--details items-start flex gap-4">
                 <img class="h-[10rem]" src="../img/save pay.webp" alt="" />
-                <div class="homeStars__text grid gap-5">
+                <div class="rewardStars__text grid gap-5">
                   <h4 class="font-bold">Save payment in the app</h4>
                   <p>
                     Check-out faster by saving a credit/debit card or PayPal to
@@ -356,14 +441,14 @@
                 </div>
               </div>
             </div>
-            <div class="homeStars__card grid gap-7">
-              <div class="homeStars__card--title">
-                <small class="text-[1.2rem] font-bold">2★Star per dollar</small>
+            <div class="rewardStars__card grid gap-7 lg:grid-cols-3">
+              <div class="rewardStars__card--title">
+                <small>2★Star per dollar</small>
                 <p>Add funds in the app</p>
               </div>
-              <div class="homeStars__card--details items-start flex gap-4">
+              <div class="rewardStars__card--details items-start flex gap-4">
                 <img class="h-[10rem]" src="../img/preload.png" alt="" />
-                <div class="homeStars__text grid gap-5">
+                <div class="rewardStars__text grid gap-5">
                   <h4 class="font-bold">Preload</h4>
                   <p>
                     Preload To save time and earn Stars twice as fast, add money
@@ -372,9 +457,9 @@
                   </p>
                 </div>
               </div>
-              <div class="homeStars__card--details items-start flex gap-4">
+              <div class="rewardStars__card--details items-start flex gap-4">
                 <img class="h-[10rem]" src="../img/register.webp" alt="" />
-                <div class="homeStars__text grid gap-5">
+                <div class="rewardStars__text grid gap-5">
                   <h4 class="font-bold">Register your gift card</h4>
                   <p>
                     Register your gift card Then use it to pay through the app.
@@ -399,72 +484,73 @@
               Stars.
             </p>
           </div>
-          <div class="rewardPartner__wrapper flex flex-col gap-7 pb-[4rem]">
+          <div class="rewardPartner__wrapper flex flex-col gap-9 pb-[4rem]">
             <div class="rewardPartner__card items-center flex gap-4">
               <img class="h-[3rem]" src="../img/delta-skymiles.webp" alt="" />
-              <div class="homeStars__text grid gap-5">
+              <div class="rewardStars__text grid gap-5">
                 <p>
                   <a
                     class="underline hover:decoration-transparent text-primary"
                     href=""
                     >Link your Delta Sky Miles</a
                   >&nbsp;
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
-                  ></i
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                    ></i></a
                   >&nbsp; and Starbucks® Rewards accounts to earn miles on
                   Starbucks Card reloads of $25 or more, plus Double Stars on
-                  travel days.¹
+                  travel days.<sup><a href="#partner1">1</a></sup>
                 </p>
               </div>
             </div>
             <div class="rewardPartner__card items-center flex gap-4">
               <img class="h-[3rem]" src="../img/bank-of-america.webp" alt="" />
-              <div class="homeStars__text grid gap-5">
+              <div class="rewardStars__text grid gap-5">
                 <p>
                   <a
                     class="underline hover:decoration-transparent text-primary"
                     href=""
                     >Link your Bank of America</a
                   >&nbsp;
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
-                  ></i
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                    ></i></a
                   >&nbsp; eligible card and Starbucks® Rewards account to earn
                   2% Cash Back and Bonus Stars on qualifying Starbucks in-app
-                  purchases.²
+                  purchases.<sup><a href="#partner2">2</a></sup>
                 </p>
               </div>
             </div>
             <div class="rewardPartner__card items-center flex gap-4">
               <img class="h-[3rem]" src="../img/marriott-logo.webp" alt="" />
-              <div class="homeStars__text grid gap-5">
+              <div class="rewardStars__text grid gap-5">
                 <p>
                   <a
                     class="underline hover:decoration-transparent text-primary"
                     href=""
                     >Link your Marriott Bonvoy® </a
                   >&nbsp;
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
-                  ></i
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                    ></i></a
                   >&nbsp; and Starbucks® Rewards accounts to earn Double Stars
                   during eligible stays, points during any Marriott Bonvoy Week
-                  and more.³
+                  and more.<sup><a href="#partner3">3</a></sup>
                 </p>
               </div>
             </div>
           </div>
-          <div class="text-center">
-            <a class="btn bg-primaryy" href="">Join Starbucks® Rewards </a>
-          </div>
+          <a class="btn bg-primaryy" href="">Join Starbucks® Rewards </a>
         </div>
       </section>
 
-      <!-- questions -->
-      <section class="question py-10 px-4">
-        <div class="question__wrapper">
-          <div class="question__head">
+      <!-- question -->
+      <section class="question py-20">
+        <div class="container">
+          <div class="question__wrapper grid gap-3">
             <h2 class="font-bold">Questions?</h2>
             <p>
               We want to help in any way we can. You can ask your barista
@@ -474,28 +560,328 @@
                 href=""
                 >right over here</a
               >&nbsp;
-              <i
-                class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
-              ></i>
+              <a href=""
+                ><i
+                  class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                ></i
+              ></a>
             </p>
           </div>
-          <div class="question__bottom">
-            <div class="question__first"></div>
-            <div class="question__second">
-              <div class="question__second--earn"></div>
-              <div class="question__second--term"></div>
+        </div>
+      </section>
+
+      <!-- stores -->
+      <section class="terms bg-secondary/50 py-10">
+        <div class="container">
+          <div class="terms__wrapper grid gap-7">
+            <div class="terms__first grid gap-3">
+              <p>At participating stores. Restrictions apply.</p>
+              <p id="partner1">
+                <sup>1</sup>Excludes taxes and gratuities. At participating
+                stores. Some restrictions apply. Flights purchased close to
+                departure may not earn double Stars. Stars and miles may not be
+                earned on purchases of alcohol, Starbucks Cards and Starbucks
+                Card reloads. For details, visit
+                <a
+                  class="underline hover:decoration-transparent text-primary"
+                  href=""
+                  >deltastarbucks.com/terms</a
+                >&nbsp;
+                <a href=""
+                  ><i
+                    class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                  ></i></a
+                >. ↩
+              </p>
+              <p id="partner2">
+                <sup>2</sup>At participating stores only. Some restrictions
+                apply. Linked Card members will earn 2% Cash Back on the full
+                purchase price of every Qualifying Purchase. Extra Star offer
+                excludes taxes and tips. Stars may not be earned on purchases of
+                alcohol or on reloads of Starbucks Cards that are not
+                registered. For details, visit
+                <a
+                  class="underline hover:decoration-transparent text-primary"
+                  href=""
+                >
+                  Terms and Conditions </a
+                >&nbsp;
+                <a href=""
+                  ><i
+                    class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                  ></i></a
+                >. Bank of America, N.A. Member FDIC.↩
+              </p>
+              <p id="partner3">
+                <sup>3</sup>Individuals must link loyalty program accounts to
+                participate in offer. Members with linked accounts will earn:
+                (a) double Starbucks Rewards Stars on Qualifying Starbucks
+                Transactions during Eligible Stays at Participating Marriott
+                Bonvoy Hotels, excluding stays at rewards & Villas by Marriott
+                Bonvoy and The Ritz-Carlton Yacht Collection, and (b) earn 100
+                Marriott Bonvoy Points upon completion of 3 Qualifying Starbucks
+                Transactions during Marriott Bonvoy Week. Qualifying Starbucks
+                Transactions must be made at U.S. participating Starbucks stores
+                and exclude purchases of alcoholic beverages, Starbucks Card
+                eGifts and physical Starbucks gift. To earn Double Stars, the
+                applicable stay must qualify as an Eligible Stay at a
+                Participating Marriott Bonvoy® Hotel under offer terms and
+                conditions. Other restrictions and exclusions apply. For full
+                offer terms and conditions, visit
+                <a
+                  class="underline hover:decoration-transparent text-primary"
+                  href=""
+                >
+                  Starbucks.com/MarriottBonvoy</a
+                >&nbsp;
+                <a href=""
+                  ><i
+                    class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                  ></i></a
+                >. Marriott Bonvoy® and its affiliated brands and hotels are the
+                registered trademarks and/or service marks of Marriott
+                International, Inc. and its affiliates. Used under license from
+                Marriott International, Inc.↩
+              </p>
             </div>
-            <div class="question__third">
-              <div class="question__third--benefits"></div>
-              <div class="question__third--rewards"></div>
+            <div class="terms__second grid gap-7">
+              <div class="terms__second--details grid gap-3">
+                <p class="font-extrabold text-black/60">EARNING STARS</p>
+                <p>
+                  Stars cannot be earned on purchases of alcohol, Starbucks
+                  Cards or Starbucks Card reloads.
+                </p>
+                <p>
+                  Earn 1 Star per $1 spent when you scan your member barcode in
+                  the app, then pay with cash, credit/debit cards or mobile
+                  wallets at participating stores. You can also earn 1 Star per
+                  $1 spent when you link a payment method and pay directly
+                  through the app.
+                </p>
+                <p>
+                  Earn 2 Stars per $1 spent when you load funds and pay with
+                  your digital Starbucks Card in the app. You can also earn 2
+                  Stars per $1 spent when you pay in-person at a participating
+                  store with your registered physical Starbucks Card or scan
+                  your member barcode in the app, and then use any physical
+                  Starbucks Card (regardless of whether it is registered) to
+                  complete the purchase.
+                </p>
+              </div>
+              <div class="terms__second--details grid gap-3">
+                <p class="font-extrabold text-black/60">TERMS OF USE</p>
+                <p>
+                  For full program details visit
+                  <a
+                    class="underline hover:decoration-transparent text-primary"
+                    href=""
+                  >
+                    starbucks.com/rewards/terms</a
+                  >&nbsp;
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                    ></i
+                  ></a>
+                  .
+                </p>
+                <p>
+                  Starbucks® Rewards benefits are available at participating
+                  Starbucks stores. Not all stores have the ability to honor
+                  Rewards at this time. Visit the
+                  <a
+                    class="underline hover:decoration-transparent text-primary"
+                    href=""
+                  >
+                    Starbucks Store Locator</a
+                  >&nbsp;
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-arrow-up-right-from-square text-primary text-[0.6rem]"
+                    ></i
+                  ></a>
+                  and search for locations honoring “Redeem Rewards”.
+                </p>
+              </div>
+              <div class="terms__second--details grid gap-3">
+                <p class="font-bold text-black/70">BENEFITS</p>
+                <p>
+                  Free refills available during same in-store visit only. To
+                  qualify for the Birthday Reward, you must have made at least
+                  one Star-earning transaction.
+                </p>
+              </div>
+              <div class="terms__second--details grid gap-3">
+                <p class="font-bold text-black/70">REDEEMING REWARDS</p>
+                <p>
+                  Rewards cannot be redeemed for alcoholic beverages or
+                  multi-serve items. You pay the difference for any beverage
+                  customization over $1 and/or merchandise item over $20. Not
+                  all stores honor tiered Rewards. Select stores redeem 200
+                  Stars for free food or drink items only.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <!-- dropdown -->
+    <section class="dropdown">
+      <div class="container">
+        <div class="dropdown__wrapper border-t-2 border-b-2 py-5">
+          <div class="dropdown__item">
+            <h4>About Us<i class="fa-solid fa-chevron-down"></i></h4>
+            <div class="dropdown__item--content">
+              <p class="text-black/70"><a href="">Our Company</a></p>
+              <p class="text-black/70"><a href="">Our Coffee</a></p>
+              <p class="text-black/70"><a href="">Stories and News</a></p>
+              <p class="text-black/70"><a href="">Starbucks Archive</a></p>
+              <p class="text-black/70"><a href="">Investor Relations</a></p>
+              <p class="text-black/70"><a href="">Customer Service</a></p>
+              <p class="text-black/70"><a href="">Contact Us</a></p>
+            </div>
+          </div>
+          <div class="dropdown__item">
+            <h4>Careers<i class="fa-solid fa-chevron-down"></i></h4>
+            <div class="dropdown__item--content">
+              <p class="text-black/70"><a href="">Culture and Values</a></p>
+              <p class="text-black/70">
+                <a href="">Inclusion, Diversity, and Equity</a>
+              </p>
+              <p class="text-black/70">
+                <a href="">College Achievement Plan</a>
+              </p>
+              <p class="text-black/70"><a href="">Alumni Community</a></p>
+              <p class="text-black/70"><a href="">U.S. Careers</a></p>
+              <p class="text-black/70"><a href="">International Careers</a></p>
+            </div>
+          </div>
+          <div class="dropdown__item">
+            <h4>Social Impact<i class="fa-solid fa-chevron-down"></i></h4>
+            <div class="dropdown__item--content">
+              <p class="text-black/70"><a href="">People</a></p>
+              <p class="text-black/70"><a href="">Planet</a></p>
+              <p class="text-black/70">
+                <a href="">Environmental and Social Impact Reporting</a>
+              </p>
+            </div>
+          </div>
+          <div class="dropdown__item">
+            <h4>
+              For Business Partners<i class="fa-solid fa-chevron-down"></i>
+            </h4>
+            <div class="dropdown__item--content">
+              <p class="text-black/70">
+                <a href="">Landlord Support Center</a>
+              </p>
+              <p class="text-black/70">
+                <a href="">Suppliers</a>
+              </p>
+              <p class="text-black/70">
+                <a href="">Corporate Gift Card Sales</a>
+              </p>
+              <p class="text-black/70">
+                <a href="">Office and Foodservice Coffee</a>
+              </p>
+            </div>
+          </div>
+          <div class="dropdown__item">
+            <h4>Order and Pick Up<i class="fa-solid fa-chevron-down"></i></h4>
+            <div class="dropdown__item--content">
+              <p class="text-black/70"><a href="">Order on the App</a></p>
+              <p class="text-black/70"><a href="">Order on the Web</a></p>
+              <p class="text-black/70"><a href="">Delivery</a></p>
+              <p class="text-black/70">
+                <a href="">Order and Pick Up Options</a>
+              </p>
+              <p class="text-black/70">
+                <a href="">Explore and Find Coffee for Home</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper py-10 grid gap-10">
+          <ul class="footer__socials">
+            <li>
+              <small
+                ><a href=""
+                  ><i class="fa-brands fa-spotify text-base"></i></a></small
+              ><span></span>
+            </li>
+            <li>
+              <small
+                ><a href=""
+                  ><i class="fa-brands fa-facebook-f text-base"></i></a></small
+              ><span></span>
+            </li>
+            <li>
+              <small
+                ><a href=""
+                  ><i class="fa-brands fa-pinterest-p text-base"></i></a></small
+              ><span></span>
+            </li>
+            <li>
+              <small
+                ><a href=""
+                  ><i class="fa-brands fa-instagram text-base"></i></a></small
+              ><span></span>
+            </li>
+            <li>
+              <small
+                ><a href=""
+                  ><i class="fa-brands fa-youtube text-base"></i></a></small
+              ><span></span>
+            </li>
+            <li>
+              <small
+                ><a href=""
+                  ><i class="fa-brands fa-twitter text-base"></i></a></small
+              ><span></span>
+            </li>
+          </ul>
+          <div class="footer__social--text grid gap-5">
+            <p>
+              <a class="hover:underline" href="">Privacy Notice</a>
+            </p>
+            <p>
+              <a class="hover:underline" href=""
+                >Consumer Health Privacy Notice</a
+              >
+            </p>
+            <p>
+              <a class="hover:underline" href="">Terms of Use</a>
+            </p>
+            <p>
+              <a class="hover:underline" href=""
+                >Do Not Share My Personal Information</a
+              >
+            </p>
+            <p>
+              <a class="hover:underline" href="">CA Supply Chain Act</a>
+            </p>
+            <p>
+              <a class="hover:underline" href="">Accessibility</a>
+            </p>
+            <p>
+              <a class="hover:underline" href="">Cookie Preferences</a>
+            </p>
+          </div>
+          <p class="text-black/40">
+            © 2024 Starbucks Coffee Company. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
     <!-- script -->
     <script src="../js/toggle_menu.js"></script>
     <script src="../js/tabs.js"></script>
+    <script src="../js/accordion.js"></script>
   </body>
 </html>

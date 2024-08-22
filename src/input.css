@@ -17,16 +17,24 @@
     @apply text-5xl;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-3xl lg:text-4xl;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-2xl lg:text-3xl;
   }
   h4 {
-    @apply text-base font-medium;
+    @apply text-base font-medium lg:text-xl;
   }
   p {
-    @apply text-sm font-medium;
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .p2 {
+    @apply text-base;
+  }
+
+  .h4_2 {
+    @apply text-xl;
   }
 
   .header__mobile {
@@ -59,11 +67,15 @@
     @apply grid gap-5 text-center pb-10;
   }
 
-  .homeStars__card {
+  .rewardStars__card {
     @apply border-b;
   }
-  .homeStars__card:last-child {
+  .rewardStars__card:last-child {
     @apply border-none;
+  }
+
+  .rewardStars__card small {
+    @apply text-[1.1rem] font-bold;
   }
 
   .rewardFav li i {
@@ -75,7 +87,7 @@
   }
 
   .rewardFav ul:after {
-    @apply content-[""] absolute bottom-0 h-[4px] w-10 bg-primary w-[20%];
+    @apply content-[""] absolute bottom-[-1px] h-[4px] w-10 bg-primary w-[20%] left-[0%] transition duration-500;
   }
 
   .rewardFav ul:after.active {
@@ -83,10 +95,90 @@
   }
 
   .rewardFav__card {
-    @apply grid gap-10 pt-5 hidden;
+    @apply hidden;
   }
+
   .rewardFav__card.active {
-    @apply block;
+    @apply grid gap-10 pt-5 block lg:grid-cols-2 lg:items-center lg:max-w-[60rem] lg:py-10;
+  }
+
+  .rewardFav__card img {
+    @apply lg:h-[12rem];
+  }
+
+  .rewardFav__card--text {
+    @apply grid text-center gap-5 lg:max-w-[20rem] lg:text-start;
+  }
+  .rewardFav__card--text small {
+    @apply text-[1.2rem] font-bold lg:text-2xl;
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+  /* .rewardExtras__card{
+    @apply lg:flex lg:flex-col lg:items-center lg:justify-center lg:text-center
+  } */
+
+  /* .dropdown__item h4 {
+    @apply flex justify-between pb-8 items-center;
+  }
+
+  .dropdown__item h4:last-child {
+    @apply border-b bg-yellow-200;
+  }
+  .dropdown__item--content {
+    @apply duration-700 hidden;
+  }
+  .dropdown__item--content.open {
+    @apply grid gap-7 transition ease-in-out duration-700 pb-7 block ;
+  }
+  .dropdown__item--content a {
+@apply hover:text-black;
+  }
+  .dropdown__item i.open {
+    @apply rotate-[180deg] transition ease-in-out duration-500;
+  } */
+
+  .dropdown__item {
+    @apply mb-3;
+  }
+
+  .dropdown__item:last-child {
+    @apply mb-0;
+  }
+  .dropdown__item h4,
+  .dropdown__item i {
+    @apply py-2 font-semibold duration-500 flex items-center justify-between cursor-pointer;
+  }
+  .dropdown__item--content {
+    @apply h-auto max-h-0 overflow-hidden ease-in-out duration-500 text-justify grid gap-5;
+  }
+
+  .dropdown__item i.open {
+    @apply rotate-[180deg] duration-700;
+  }
+  .dropdown__item--content a {
+    @apply hover:text-black;
+  }
+  .dropdown__item--content.open {
+    @apply max-h-[50rem]  py-2 duration-700;
+  }
+
+  .footer__socials {
+    @apply flex gap-4 text-white;
+  }
+
+  .footer__socials li {
+    @apply relative;
+  }
+
+  .footer__socials small {
+    @apply w-[32px] h-[32px] bg-black rounded-full bottom-0  inline-block flex items-center justify-center;
+  }
+
+  .footer__socials span {
+    @apply w-[32px] h-[32px] hover:bg-black/20 hover:scale-150 hover:duration-200 rounded-full absolute bottom-0 content-[""] left-0;
   }
 }
 

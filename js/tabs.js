@@ -1,7 +1,28 @@
 const rewardTabs = document.querySelectorAll(".rewardFav li");
 const contents = document.querySelectorAll(".rewardFav__card");
-const tabs = document.querySelector(".rewardFav ul:after");
+let botLine = document.querySelector(".reward__line");
+let indexValue = 0;
+let leftPos = 0;
 
+// for bottom line
+rewardTabs.forEach((rewardTab, index) => {
+  rewardTab.addEventListener("click", () => {
+    indexValue = index;
+    console.log(indexValue);
+    calcLeftPos();
+    botLine.style.left = leftPos + "%";
+    leftPos = 0;
+  });
+});
+
+function calcLeftPos() {
+  for (let x = 0; x < indexValue; x++) {
+    leftPos += 20;
+  }
+  console.log(leftPos);
+}
+
+// for content
 rewardTabs.forEach((rewardTab) => {
   rewardTab.addEventListener("click", () => {
     removeActiverewardTab();
@@ -9,8 +30,6 @@ rewardTabs.forEach((rewardTab) => {
     const activeContent = document.querySelector(`#${rewardTab.id}-content`);
     removeActiveContent();
     activeContent.classList.add("active");
-    // removeActiveTab();
-    // tabs.classList.add("active");
   });
 });
 
@@ -24,8 +43,3 @@ function removeActiveContent() {
     content.classList.remove("active");
   });
 }
-// function removeActiveTab() {
-//   tabs.forEach((tab) => {
-//     tab.classList.remove("active");
-//   });
-// }

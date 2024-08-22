@@ -602,17 +602,18 @@ p{
 }
 
 .toggle__menu span{
-  height: 2px;
+  height: 1.5px;
   width: 1.25rem;
   border-radius: 0.5rem;
   background-color: rgb(0 0 0 / 0.5);
+  transition-duration: 500ms;
   --tw-content: "*";
   content: var(--tw-content);
 }
 
 .toggle__menu small{
   position: absolute;
-  bottom: 4px;
+  bottom: 3px;
   right: 6px;
   height: 1.5rem;
   width: 1.5rem;
@@ -632,11 +633,35 @@ p{
   background-color: rgb(0 0 0 / 0.1);
 }
 
-.title{
-  display: grid;
-  gap: 1.25rem;
-  padding-bottom: 2.5rem;
-  text-align: center;
+.toggle__menu span:nth-child(2){
+  position: absolute;
+  top: 48%;
+  opacity: 0;
+}
+
+.toggle__menu.open span:nth-child(1){
+  --tw-translate-y: 0.4rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
+}
+
+.toggle__menu.open span:nth-child(4){
+  --tw-translate-y: -0.4rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
+}
+
+.toggle__menu.open span:nth-child(2){
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
+  transition-delay: 500ms;
+}
+
+.toggle__menu.open span:nth-child(3){
+  --tw-rotate: 135deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-delay: 500ms;
 }
 
 .rewardStars__card{
@@ -652,6 +677,10 @@ p{
   font-weight: 700;
 }
 
+.rewardFav ul{
+  position: relative;
+}
+
 .rewardFav li i{
   font-size: 9px;
   --tw-text-opacity: 1;
@@ -665,26 +694,15 @@ p{
   font-weight: 700;
 }
 
-.rewardFav ul:after{
+.reward__line{
   position: absolute;
-  bottom: -1px;
-  left: 0%;
-  height: 4px;
-  width: 2.5rem;
+  bottom: 0px;
+  left: 0px;
+  height: 5px;
   width: 20%;
   --tw-bg-opacity: 1;
   background-color: rgb(0 117 74 / var(--tw-bg-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  --tw-content: "";
-  content: var(--tw-content);
-}
-
-.rewardFav ul.active:after{
-  display: block;
 }
 
 .rewardFav__card{
@@ -740,30 +758,6 @@ p{
 a{
   cursor: pointer;
 }
-
-/* .rewardExtras__card{
-    @apply lg:flex lg:flex-col lg:items-center lg:justify-center lg:text-center
-  } */
-
-/* .dropdown__item h4 {
-    @apply flex justify-between pb-8 items-center;
-  }
-
-  .dropdown__item h4:last-child {
-    @apply border-b bg-yellow-200;
-  }
-  .dropdown__item--content {
-    @apply duration-700 hidden;
-  }
-  .dropdown__item--content.open {
-    @apply grid gap-7 transition ease-in-out duration-700 pb-7 block ;
-  }
-  .dropdown__item--content a {
-@apply hover:text-black;
-  }
-  .dropdown__item i.open {
-    @apply rotate-[180deg] transition ease-in-out duration-500;
-  } */
 
 .dropdown__item{
   margin-bottom: 0.75rem;
@@ -823,6 +817,12 @@ a{
 
 .footer__socials li{
   position: relative;
+}
+
+.footer__socials a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__socials small{
@@ -1111,6 +1111,10 @@ a{
   height: 7rem;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .grid-cols-5{
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -1193,11 +1197,6 @@ a{
   background-color: rgb(30 57 50 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
-}
-
 .bg-bgMenu{
   background-image: url('../img/banner phone1.gif');
 }
@@ -1248,11 +1247,6 @@ a{
 .py-\[4rem\]{
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-\[5rem\]{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .pb-10{
@@ -1371,32 +1365,20 @@ a{
     max-width: 22rem;
   }
 
-  .lg\:max-w-\[50rem\]{
-    max-width: 50rem;
+  .lg\:max-w-\[30rem\]{
+    max-width: 30rem;
   }
 
   .lg\:max-w-\[70rem\]{
     max-width: 70rem;
   }
 
-  .lg\:max-w-\[60rem\]{
-    max-width: 60rem;
+  .lg\:max-w-\[72rem\]{
+    max-width: 72rem;
   }
 
-  .lg\:max-w-\[80rem\]{
-    max-width: 80rem;
-  }
-
-  .lg\:max-w-\[82rem\]{
-    max-width: 82rem;
-  }
-
-  .lg\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:grid-cols-\[15\%_40\%_40\%\]{
+    grid-template-columns: 15% 40% 40%;
   }
 
   .lg\:flex-row{
@@ -1421,14 +1403,6 @@ a{
 
   .lg\:gap-7{
     gap: 1.75rem;
-  }
-
-  .lg\:gap-5{
-    gap: 1.25rem;
-  }
-
-  .lg\:gap-2{
-    gap: 0.5rem;
   }
 
   .lg\:bg-bgMenuLarge{

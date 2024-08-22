@@ -72,6 +72,7 @@
             <span class=""></span>
             <span class=""></span>
             <span class=""></span>
+            <span class=""></span>
             <small></small>
           </div>
         </div>
@@ -246,17 +247,20 @@
       <section class="rewardFav bg-secondary/50 pt-10">
         <div class="rewardFav__title grid gap-5 text-center">
           <h3 class="font-bold">Get your favorites for free</h3>
-          <ul
-            class="rewardFav__tabs relative grid grid-cols-5 py-5 items-center lg:justify-between lg:max-w-[50rem]"
-          >
-            <li id="rewardtabs-1" class="active">
-              25<i class="fa-solid fa-star"></i>
-            </li>
-            <li id="rewardtabs-2">100<i class="fa-solid fa-star"></i></li>
-            <li id="rewardtabs-3">200<i class="fa-solid fa-star"></i></li>
-            <li id="rewardtabs-4">300<i class="fa-solid fa-star"></i></li>
-            <li id="rewardtabs-5">400<i class="fa-solid fa-star"></i></li>
-          </ul>
+          <div class="container">
+            <ul
+              class="rewardFav__tabs relative grid grid-cols-5 py-5 items-center lg:justify-between lg:max-w-[30rem] lg:mx-auto"
+            >
+              <li id="rewardtabs-1" class="active">
+                25<i class="fa-solid fa-star"></i>
+              </li>
+              <li id="rewardtabs-2">100<i class="fa-solid fa-star"></i></li>
+              <li id="rewardtabs-3">200<i class="fa-solid fa-star"></i></li>
+              <li id="rewardtabs-4">300<i class="fa-solid fa-star"></i></li>
+              <li id="rewardtabs-5">400<i class="fa-solid fa-star"></i></li>
+              <span class="reward__line"></span>
+            </ul>
+          </div>
         </div>
 
         <div
@@ -404,7 +408,7 @@
       </section>
 
       <!-- reward stars -->
-      <section class="rewardStars  py-[4rem]">
+      <section class="rewardStars py-[4rem]">
         <div class="container">
           <div class="rewardStars__title grid gap-5 text-center pb-10">
             <h3 class="font-semibold">Cash or card, you earn Stars</h3>
@@ -413,8 +417,12 @@
               coffee. Those Stars add up to (really delicious) Rewards.
             </p>
           </div>
-          <div class="rewardStars__wrapper grid gap-10 lg:max-w-[82rem] lg:mx-auto">
-            <div class="rewardStars__card grid gap-7 lg:grid-cols-3">
+          <div
+            class="rewardStars__wrapper grid gap-10 lg:max-w-[72rem] lg:mx-auto"
+          >
+            <div
+              class="rewardStars__card grid gap-7 lg:grid-cols-[15%_40%_40%]"
+            >
               <div class="rewardStars__card--title">
                 <small>1★Star per dollar</small>
                 <p>Pay as you go</p>
@@ -423,10 +431,7 @@
                 <img class="h-[10rem]" src="../img/scan.png" alt="" />
                 <div class="rewardStars__text grid gap-5">
                   <h4 class="font-bold">Scan and pay separately</h4>
-                  <p>
-                    Use cash or credit/debit card at the
-                    register.
-                  </p>
+                  <p>Use cash or credit/debit card at the register.</p>
                 </div>
               </div>
               <div class="rewardStars__card--details items-start flex gap-4">
@@ -441,7 +446,9 @@
                 </div>
               </div>
             </div>
-            <div class="rewardStars__card grid gap-7 lg:grid-cols-3">
+            <div
+              class="rewardStars__card grid gap-7 lg:grid-cols-[15%_40%_40%]"
+            >
               <div class="rewardStars__card--title">
                 <small>2★Star per dollar</small>
                 <p>Add funds in the app</p>
@@ -543,7 +550,9 @@
               </div>
             </div>
           </div>
-          <a class="btn bg-primaryy" href="">Join Starbucks® Rewards </a>
+          <div class="flex w-full justify-center">
+            <a class="btn bg-primaryy" href="">Join Starbucks® Rewards </a>
+          </div>
         </div>
       </section>
 
@@ -726,6 +735,7 @@
         </div>
       </section>
     </main>
+
     <!-- dropdown -->
     <section class="dropdown">
       <div class="container">

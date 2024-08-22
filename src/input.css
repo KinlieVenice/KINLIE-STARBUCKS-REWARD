@@ -57,15 +57,30 @@
     @apply flex flex-col gap-1 p-2 lg:hidden relative;
   }
   .toggle__menu span {
-    @apply content-["*"] bg-black/50 w-5 h-[2px] rounded-lg;
+    @apply content-["*"] bg-black/50 w-5 h-[1.5px] rounded-lg duration-500;
   }
 
   .toggle__menu small {
-    @apply absolute h-6 w-6 hover:bg-black/10 hover:scale-150 rounded-full bottom-[4px] right-[6px] transition ease-in duration-500;
+    @apply absolute h-6 w-6 hover:bg-black/10 hover:scale-150 rounded-full bottom-[3px] right-[6px] transition ease-in duration-500;
   }
-  .title {
-    @apply grid gap-5 text-center pb-10;
+
+  .toggle__menu span:nth-child(2) {
+    @apply absolute top-[48%] opacity-0;
   }
+
+  .toggle__menu.open span:nth-child(1) {
+    @apply translate-y-[0.4rem] opacity-0;
+  }
+  .toggle__menu.open span:nth-child(4) {
+    @apply translate-y-[-0.4rem] opacity-0;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply rotate-45 delay-500 opacity-100;
+  } 
+  .toggle__menu.open span:nth-child(3) {
+    @apply rotate-[135deg] delay-500;
+  } 
+
 
   .rewardStars__card {
     @apply border-b;
@@ -78,6 +93,10 @@
     @apply text-[1.1rem] font-bold;
   }
 
+  .rewardFav ul {
+    @apply relative;
+  }
+
   .rewardFav li i {
     @apply text-orange-400 text-[9px];
   }
@@ -86,12 +105,8 @@
     @apply text-xl font-bold cursor-pointer;
   }
 
-  .rewardFav ul:after {
-    @apply content-[""] absolute bottom-[-1px] h-[4px] w-10 bg-primary w-[20%] left-[0%] transition duration-500;
-  }
-
-  .rewardFav ul:after.active {
-    @apply block;
+  .reward__line {
+    @apply absolute w-[20%] h-[5px] bg-primary bottom-0 left-0 duration-500;
   }
 
   .rewardFav__card {
@@ -116,29 +131,6 @@
   a {
     @apply cursor-pointer;
   }
-  /* .rewardExtras__card{
-    @apply lg:flex lg:flex-col lg:items-center lg:justify-center lg:text-center
-  } */
-
-  /* .dropdown__item h4 {
-    @apply flex justify-between pb-8 items-center;
-  }
-
-  .dropdown__item h4:last-child {
-    @apply border-b bg-yellow-200;
-  }
-  .dropdown__item--content {
-    @apply duration-700 hidden;
-  }
-  .dropdown__item--content.open {
-    @apply grid gap-7 transition ease-in-out duration-700 pb-7 block ;
-  }
-  .dropdown__item--content a {
-@apply hover:text-black;
-  }
-  .dropdown__item i.open {
-    @apply rotate-[180deg] transition ease-in-out duration-500;
-  } */
 
   .dropdown__item {
     @apply mb-3;
@@ -171,6 +163,10 @@
 
   .footer__socials li {
     @apply relative;
+  }
+
+  .footer__socials a {
+    @apply flex items-center justify-center;
   }
 
   .footer__socials small {

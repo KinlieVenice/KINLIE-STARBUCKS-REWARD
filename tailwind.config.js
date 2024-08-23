@@ -14,6 +14,7 @@ module.exports = {
       backgroundImage: {
         bgMenu: "url('../img/banner phone1.gif')",
         bgMenuLarge: "url('../img/banner.png')",
+        bgBorder: "url('../img/border-img.webp')",
       },
     },
   },

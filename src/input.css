@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-Urbanist overflow-x-hidden text-black;
+    @apply font-Urbanist overflow-x-hidden text-black lg:overflow-x-visible;
   }
 
   .container {

@@ -12,6 +12,8 @@
     />
   </head>
   <body>
+    <!-- backdrop -->
+    <span class="backdrop"></span>
     <!-- header -->
     <header class="header py-[0.95rem] lg:py-5 border-b-2 z-20">
       <div class="container">
@@ -84,7 +86,9 @@
         <div
           class="announce__wrapper flex items-center justify-between text-white"
         >
-          <p class="uppercase font-extrabold tracking-wide">Starbucks® Rewards</p>
+          <p class="uppercase font-extrabold tracking-wide">
+            Starbucks® Rewards
+          </p>
           <a class="btn bg-outlineW font-bold lg:hidden" href=""
             >Join in the app</a
           >
@@ -93,21 +97,27 @@
     </section>
     <main>
       <!-- reward banner -->
-      <section
-        class="rewardBanner bg-bgMenu bg-cover bg-no-repeat h-[40.2rem] object-contain pt-[2rem] lg:pt-0 lg:h-[50rem]"
-      >
-        <div class="container lg:bg-secondary">
-          
-          <img
-            class="hidden lg:block lg:absolute lg:h-[50rem] lg:object-cover lg:z-[1] lg:right-0"
-            src="../img/banner.png"
-            alt=""
-          />
+      <section class="rewardBanner h-[50rem] lg:pt-0 lg:h-auto lg:bg-secondary">
+        <div class="container">
           <div
-            class="rewardBanner__wrapper flex lg:h-[50rem] lg:relative justify-center"
+            class="rewardBanner__wrapper flex lg:h-[810px] lg:relative justify-center"
           >
+            <img
+              class="absolute z-[-1] lg:hidden left-0 w-full h-[50rem] object-fill"
+              src="../img/banner phone1.gif"
+              alt=""
+            />
             <div
-              class="rewardBanner__text text-center grid gap-5 justify-center lg:absolute lg:text-start lg:top-[30%] lg:left-0 lg:z-10"
+              class="rewardBanner__img lg:block lg:absolute hidden lg:w-[152.7rem]"
+            >
+              <img
+                class="lg:relative lg:object-right lg:z-[1]"
+                src="../img/banner.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="rewardBanner__text mt-[2rem] text-center grid gap-5 justify-center lg:absolute lg:text-start lg:top-[30%] lg:left-0 lg:z-10"
             >
               <h2 class="font-bold">
                 FREE COFFEE <br />
@@ -888,5 +898,11 @@
     <script src="../js/toggle_menu.js"></script>
     <script src="../js/tabs.js"></script>
     <script src="../js/accordion.js"></script>
+    <script>
+      const body = document.querySelector("body");
+      toggleMenu.addEventListener("click", () => {
+        body.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>

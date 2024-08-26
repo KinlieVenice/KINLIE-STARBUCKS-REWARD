@@ -6,7 +6,11 @@
 
 @layer base {
   body {
-    @apply font-Urbanist overflow-x-hidden text-black lg:overflow-x-visible;
+    @apply font-Urbanist overflow-x-hidden text-black;
+  }
+
+  body.open {
+    @apply overflow-hidden;
   }
 
   .container {
@@ -32,7 +36,7 @@
 /* ----------------------------HEADER------------------------ */
 
   .header__mobile {
-    @apply bg-white absolute flex flex-col w-[25rem] h-screen top-[7.625rem] duration-500 right-[-100%] text-start py-10 px-8 lg:static lg:flex-row lg:w-full lg:justify-between lg:p-0 lg:items-center lg:h-[3.5rem];
+    @apply bg-white absolute flex flex-col w-[30rem] h-screen top-[4.5rem] z-40 duration-500 right-[-100%] text-start py-10 px-8 lg:static lg:flex-row lg:w-full lg:justify-between lg:p-0 lg:items-center lg:h-[3.5rem];
   }
 
   .header__nav {
@@ -48,10 +52,10 @@
   }
 
   .toggle__menu {
-    @apply flex flex-col gap-1 p-2 lg:hidden relative;
+    @apply flex flex-col gap-1 p-2 lg:hidden relative duration-500;
   }
   .toggle__menu span {
-    @apply content-["*"] bg-black/50 w-5 h-[1.5px] rounded-lg duration-500;
+    @apply content-["*"] bg-black/50 w-5 h-[1.8px] rounded-lg duration-500;
   }
 
   .toggle__menu small {
@@ -74,6 +78,14 @@
   .toggle__menu.open span:nth-child(3) {
     @apply rotate-[135deg] delay-300;
   } 
+
+    .backdrop {
+    @apply hidden;
+  }
+
+  .backdrop.open {
+    @apply block fixed top-[4.5rem] left-0 h-screen w-full backdrop-brightness-50 duration-700 overflow-y-hidden;
+  }
 
   /* ----------------------------REWARD------------------------- */
   .rewardSteps__card {

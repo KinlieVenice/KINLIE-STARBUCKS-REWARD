@@ -455,10 +455,8 @@ body{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px){
-  body{
-    overflow-x: visible;
-  }
+body.open{
+  overflow: hidden;
 }
 
 .container{
@@ -536,11 +534,12 @@ p{
 
 .header__mobile{
   position: absolute;
-  top: 7.625rem;
+  top: 4.5rem;
   right: -100%;
+  z-index: 40;
   display: flex;
   height: 100vh;
-  width: 25rem;
+  width: 30rem;
   flex-direction: column;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -609,6 +608,7 @@ p{
   flex-direction: column;
   gap: 0.25rem;
   padding: 0.5rem;
+  transition-duration: 500ms;
 }
 
 @media (min-width: 1024px){
@@ -618,7 +618,7 @@ p{
 }
 
 .toggle__menu span{
-  height: 1.5px;
+  height: 1.8px;
   width: 1.25rem;
   border-radius: 0.5rem;
   background-color: rgb(0 0 0 / 0.5);
@@ -678,6 +678,24 @@ p{
   --tw-rotate: 135deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   transition-delay: 300ms;
+}
+
+.backdrop{
+  display: none;
+}
+
+.backdrop.open{
+  position: fixed;
+  top: 4.5rem;
+  left: 0px;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  --tw-backdrop-brightness: brightness(.5);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  transition-duration: 700ms;
 }
 
 /* ----------------------------REWARD------------------------- */
@@ -1120,6 +1138,10 @@ a{
   background-color: rgb(0 117 74 / 0.9);
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
 }
@@ -1128,12 +1150,24 @@ a{
   position: sticky;
 }
 
+.left-0{
+  left: 0px;
+}
+
 .top-0{
   top: 0px;
 }
 
 .z-20{
   z-index: 20;
+}
+
+.z-\[-1\]{
+  z-index: -1;
+}
+
+.mt-\[2rem\]{
+  margin-top: 2rem;
 }
 
 .flex{
@@ -1160,12 +1194,20 @@ a{
   height: 3rem;
 }
 
-.h-\[40\.2rem\]{
-  height: 40.2rem;
+.h-\[50rem\]{
+  height: 50rem;
 }
 
 .h-\[7rem\]{
   height: 7rem;
+}
+
+.h-auto{
+  height: auto;
+}
+
+.h-\[\]{
+  height: ;
 }
 
 .w-full{
@@ -1232,10 +1274,6 @@ a{
   justify-self: center;
 }
 
-.overflow-visible{
-  overflow: visible;
-}
-
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -1258,21 +1296,14 @@ a{
   background-color: rgb(30 57 50 / var(--tw-bg-opacity));
 }
 
-.bg-bgMenu{
-  background-image: url('../img/banner phone1.gif');
-}
-
-.bg-cover{
-  background-size: cover;
-}
-
-.bg-no-repeat{
-  background-repeat: no-repeat;
-}
-
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .px-4{
@@ -1320,10 +1351,6 @@ a{
 
 .pt-10{
   padding-top: 2.5rem;
-}
-
-.pt-\[2rem\]{
-  padding-top: 2rem;
 }
 
 .text-center{
@@ -1396,6 +1423,10 @@ a{
 }
 
 @media (min-width: 1024px){
+  body.lg\:open{
+    overflow: hidden;
+  }
+
   .lg\:open.header__mobile{
     right: 0px;
     overflow-y: hidden;
@@ -1424,6 +1455,20 @@ a{
     --tw-rotate: 135deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     transition-delay: 300ms;
+  }
+
+  .lg\:open.backdrop{
+    position: fixed;
+    top: 4.5rem;
+    left: 0px;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+    --tw-backdrop-brightness: brightness(.5);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    transition-duration: 700ms;
   }
 
   .lg\:borderImage{
@@ -1460,10 +1505,6 @@ a{
 }
 
 @media (min-width: 1024px){
-  .lg\:fixed{
-    position: fixed;
-  }
-
   .lg\:absolute{
     position: absolute;
   }
@@ -1478,10 +1519,6 @@ a{
 
   .lg\:left-\[-5\.6rem\]{
     left: -5.6rem;
-  }
-
-  .lg\:right-0{
-    right: 0px;
   }
 
   .lg\:top-\[30\%\]{
@@ -1513,10 +1550,6 @@ a{
     display: none;
   }
 
-  .lg\:h-\[50rem\]{
-    height: 50rem;
-  }
-
   .lg\:h-\[51px\]{
     height: 51px;
   }
@@ -1525,8 +1558,16 @@ a{
     height: 5rem;
   }
 
-  .lg\:max-h-\[50rem\]{
-    max-height: 50rem;
+  .lg\:h-\[810px\]{
+    height: 810px;
+  }
+
+  .lg\:h-auto{
+    height: auto;
+  }
+
+  .lg\:w-\[152\.7rem\]{
+    width: 152.7rem;
   }
 
   .lg\:max-w-\[30rem\]{
@@ -1547,22 +1588,6 @@ a{
 
   .lg\:max-w-\[72rem\]{
     max-width: 72rem;
-  }
-
-  .lg\:max-w-\[150rem\]{
-    max-width: 150rem;
-  }
-
-  .lg\:max-w-\[110rem\]{
-    max-width: 110rem;
-  }
-
-  .lg\:max-w-\[80rem\]{
-    max-width: 80rem;
-  }
-
-  .lg\:max-w-\[90rem\]{
-    max-width: 90rem;
   }
 
   .lg\:grid-cols-2{
@@ -1626,9 +1651,9 @@ a{
     background-color: rgb(208 234 228 / var(--tw-bg-opacity));
   }
 
-  .lg\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
+  .lg\:object-right{
+    -o-object-position: right;
+       object-position: right;
   }
 
   .lg\:py-5{

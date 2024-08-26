@@ -36,7 +36,7 @@
 /* ----------------------------HEADER------------------------ */
 
   .header__mobile {
-    @apply bg-white absolute flex flex-col w-[30rem] h-screen top-[4.5rem] z-40 duration-500 right-[-100%] text-start py-10 px-8 lg:static lg:flex-row lg:w-full lg:justify-between lg:p-0 lg:items-center lg:h-[3.5rem];
+    @apply bg-white absolute flex flex-col w-[25rem] h-screen top-[4.5rem] z-40 duration-500 right-[-100%] text-start py-10 px-8 lg:static lg:flex-row lg:w-full lg:justify-between lg:p-0 lg:items-center lg:h-[3.5rem];
   }
 
   .header__nav {

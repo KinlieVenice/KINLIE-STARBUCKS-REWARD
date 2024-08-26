@@ -10,6 +10,7 @@ module.exports = {
         primary: "#00754a",
         secondary: "#d0eae4",
         tertiary: "#1e3932",
+        backG: "#f2f0eb",
       },
       backgroundImage: {
         bgMenu: "url('../img/banner phone1.gif')",

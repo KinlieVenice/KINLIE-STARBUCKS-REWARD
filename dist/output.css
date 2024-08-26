@@ -1202,14 +1202,6 @@ a{
   height: 7rem;
 }
 
-.h-auto{
-  height: auto;
-}
-
-.h-\[\]{
-  height: ;
-}
-
 .w-full{
   width: 100%;
 }
@@ -1296,9 +1288,9 @@ a{
   background-color: rgb(30 57 50 / var(--tw-bg-opacity));
 }
 
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
+.bg-backG{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 240 235 / var(--tw-bg-opacity));
 }
 
 .object-fill{
